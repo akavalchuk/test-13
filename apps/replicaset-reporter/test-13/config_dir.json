@@ -1,0 +1,1 @@
+{"appName":"replicaset-reporter","userGivenName":"replicaset-reporter","destNamespace":"test-13","destServer":"https://kubernetes.default.svc","srcPath":"apps/replicaset-reporter/test-13/resources","srcRepoURL":"https://github.com/akavalchuk/test-13.git","srcTargetRevision":"","labels":{"codefresh_io_entity":"component"},"exclude":"","include":""}
