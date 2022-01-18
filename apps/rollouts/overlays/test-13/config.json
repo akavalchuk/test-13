@@ -1,0 +1,1 @@
+{"appName":"rollouts","userGivenName":"rollouts","destNamespace":"test-13","destServer":"https://kubernetes.default.svc","srcPath":"apps/rollouts/overlays/test-13","srcRepoURL":"https://github.com/akavalchuk/test-13.git","srcTargetRevision":"","labels":{"codefresh_io_entity":"component"}}
