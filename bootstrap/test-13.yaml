@@ -1,0 +1,46 @@
+apiVersion: v1
+data:
+  base-url: http://local.codefresh.io
+  runtime: |
+    apiVersion: codefresh.io/v1alpha1
+    kind: Runtime
+    metadata:
+      creationTimestamp: null
+      name: test-13
+      namespace: test-13
+    spec:
+      bootstrapSpecifier: github.com/codefresh-io/cli-v2/manifests/argo-cd
+      cluster: https://192.168.99.100:36381
+      components:
+      - name: events
+        type: kustomize
+        url: github.com/codefresh-io/cli-v2/manifests/argo-events?ref=v0.0.190
+        wait: true
+      - name: rollouts
+        type: kustomize
+        url: github.com/codefresh-io/cli-v2/manifests/argo-rollouts?ref=v0.0.190
+        wait: false
+      - name: workflows
+        type: kustomize
+        url: github.com/codefresh-io/cli-v2/manifests/argo-workflows?ref=v0.0.190
+        wait: false
+      - name: argocd-agent
+        type: kustomize
+        url: github.com/codefresh-io/cli-v2/manifests/argo-agent?ref=v0.0.190
+        wait: false
+      - name: app-proxy
+        type: kustomize
+        url: github.com/codefresh-io/cli-v2/manifests/app-proxy?ref=v0.0.190
+        wait: false
+      defVersion: 1.0.0
+      ingressHost: http://local.codefresh.io:8081
+      repo: https://github.com/akavalchuk/test-13
+      version: 0.0.190
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/managed-by: codefresh
+    codefresh.io/entity: runtimeDef
+  name: codefresh-cm
+  namespace: test-13
