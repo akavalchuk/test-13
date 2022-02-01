@@ -1,1 +1,0 @@
-{"appName":"events-reporter","userGivenName":"events-reporter","destNamespace":"test-13","destServer":"https://kubernetes.default.svc","srcPath":"apps/events-reporter/test-13/resources","srcRepoURL":"https://github.com/akavalchuk/test-13.git","srcTargetRevision":"","labels":{"codefresh_io_entity":"component"},"exclude":"","include":""}
